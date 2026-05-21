@@ -1,0 +1,34 @@
+The ``5-text_indentation`` module
+==================================
+
+Using ``text_indentation``:
+---------------------------
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("Hello. How are you? Fine: Bye")
+Hello.
+<BLANKLINE>
+How are you?
+<BLANKLINE>
+Fine:
+<BLANKLINE>
+Bye
+
+>>> try:
+...     text_indentation(123)
+... except Exception as e:
+...     print(e)
+text must be a string
+
+>>> text_indentation("   Leading and trailing spaces.   ")
+Leading and trailing spaces.
+<BLANKLINE>
+
+>>> text_indentation("Sentence one. Sentence two? Final sentence:")
+Sentence one.
+<BLANKLINE>
+Sentence two?
+<BLANKLINE>
+Final sentence:
+<BLANKLINE>
